@@ -1,16 +1,15 @@
+//ArithmeticException
+//ArrayIndexOutOfBoundsException
+
 import java.util.Scanner;
-//Using 2 try Blocks
-class HAAE2		//Handling Arithmetic & Array Exception
+class HAAE2
 {
 	public static void main(String args[])
 	{
-		int a,b,x=1,i;
-		int n[] = new int[5];
+		int a,b,n[] = new int[5];
 		Scanner sc = new Scanner(System.in);
-		while(x==1)
-		{
 		System.out.print("\nEnter 2 Nos. : ");
-		a=sc.nextInt();
+		a=sc.nextInt();		
 		b=sc.nextInt();
 		try
 		{
@@ -23,20 +22,15 @@ class HAAE2		//Handling Arithmetic & Array Exception
 		finally
 		{
 			System.out.print("\nEnter Index : ");
-			i=sc.nextInt();
+			a=sc.nextInt();
 			try
-			{	n[i]=0;
-				System.out.print("Enter Data : ");
-				n[i]=sc.nextInt();
-				System.out.print("Data Stored.\n");
+			{	n[a]=0;
+				System.out.println("Index Initialised");
 			}
 			catch(java.lang.ArrayIndexOutOfBoundsException Exp)
 			{	
-				System.out.println("\nMax size of Array is 5");
+				System.out.println("\nArray size is 5");
 			}
-			System.out.println("\nPress 1 to continue : ");
-			x=sc.nextInt();
-		}
 		}
 	}
 }

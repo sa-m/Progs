@@ -1,3 +1,5 @@
+//User Defined Exception Handling for Voting
+
 class A1 extends Exception
 {
 	A1(String S)
@@ -12,19 +14,18 @@ class B1
 		if(age<18)
 			throw new A1("Not Allowed");
 		else
-			System.out.println("Allowed to Vote");
+			System.out.println("Allowed to Vote\n");
 	}
 	public static void main(String args[])
 	{
-		A a=new B();
 		try
 		{
+			validate(19);
 			validate(13);
 		}
 		catch(Exception Exp)
 		{
-			System.out.println(Exp); 		//value of Exp is 'A1' ie class name
-			System.out.println("\nException Found");
+			System.out.println(Exp);
 		}
 	}
 }
