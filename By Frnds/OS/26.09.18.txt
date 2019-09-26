@@ -1,0 +1,37 @@
+cseit@cseit-107:~$ mkdir 053                         (make directory)
+   
+
+
+                    
+
+
+cseit@cseit-107:~$ cd 053                            (change directory) 
+
+
+cseit@cseit-107:~/053$ pwd 053                       (present working directory 
+
+/home/cseit/053                                          / path to the directory)
+
+
+
+
+
+
+
+cseit@cseit-107:~/053$ gedit hi.sh                   (create hi.sh)
+
+
+ #! /bin/bash                                                                             (code in directory)
+
+echo hi
+
+
+cseit@cseit-107:~/053$ chmod +x hi.sh               (.sh format)
+
+cseit@cseit-107:~/053$ ./hi.sh                      (show output)
+
+
+
+
+
+

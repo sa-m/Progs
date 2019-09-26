@@ -1,0 +1,17 @@
+#! /bin/bash
+echo enter the number
+read n
+x=$n
+sum=0
+while (($n > 0))
+do
+	k=$(( n%10 ))
+	n=$(( n/10 ))
+	sum=$(( sum+(k*k*k) ))
+done
+if((x== sum))
+then
+	echo "correct"
+else
+	echo "incorrect    $sum"
+fi

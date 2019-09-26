@@ -1,0 +1,70 @@
+MVI D,04H
+LXI H,0FF00H
+LOOP: ADD M
+      INX H
+      DCR D
+      JNZ LOOP
+MOV M,A
+HLT
+
+
+
+
+
+
+MVI D,04H
+LXI H,0FF00H
+MOV A,M
+INX H
+DCR D
+LOOP: MOV B,M
+      CMP B
+ ;    JC NEXT
+      JC 0420EH
+      MOV A,B
+      NEXT: INX H
+     	    DCR D
+      JNZ LOOP
+STA 0FF04H
+HLT
+
+
+
+
+
+
+
+
+MVI D,04H
+LXI H,0FF00H
+LOOP: MOV B,M
+      CMP B
+ ;    JNC NEXT
+      JNC 0420BH
+      MOV A,B
+      NEXT: INX H
+     	    DCR D
+      JNZ LOOP
+STA 0FF04H
+HLT
+
+
+
+
+
+
+
+
+MVI D,04H
+LXI H,0FF00H
+LOOP: ADD M
+     JNC 0420AH
+     INR B
+     MOV C,A
+     INX H
+     DCR D
+     JNZ LOOP
+MOV M,B
+INX H
+MOV M,C
+HLT

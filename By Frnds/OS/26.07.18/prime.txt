@@ -1,0 +1,16 @@
+#! /bin/bash
+echo enter the number
+read a b
+while ((n > 1))
+do
+	m=$((n/2))
+	while((m>1))
+	do
+		if(((n%m)==0))
+		then	echo $n;;
+		fi
+		m=$((m-1))
+	done
+	n=$(( n-1 ))
+done
+

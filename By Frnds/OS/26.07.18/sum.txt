@@ -1,0 +1,11 @@
+#! /bin/bash
+echo enter the number
+read n
+sum=0
+while ((n > 0))
+do
+	k=$(( n%10 ))
+	n=$(( n/10 ))
+	sum=$(( sum+k ))
+done
+echo "sum of digit is: $sum"
